@@ -12,3 +12,6 @@ iptables -A OUTPUT -p tcp -d 192.168.0.1 -s 192.168.0.10 --dport 102 --tcp-flags
 --dport. Port used by the PLC.
 
 --tcp-flags. We want to drop any reset packet coming out from our linux machine. 
+
+
+The code inside the file S71500_U.py only writes a value in the space of memory IW4. However it can be modified for writing in other spaces of memory. 
