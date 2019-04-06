@@ -1,7 +1,7 @@
 # PLC Communication
-This repository allows you to craft packets and communicate with the S7-1500 PLC.
+Packet Crafting with Python and Scapy. Communication between a Linux-based machine and the S7-1500 PLC.
 
-Make sure you add the following rule in the firewall of the host where you are executing the Python Script. We want to avoid Reset packets coming out from our linux machine. 
+Make sure you add the following rule in the firewall of the host where you are executing the Python Script. We want to avoid Reset packets coming out from the Linux machine. 
 
 iptables -A OUTPUT -p tcp -d 192.168.0.1 -s 192.168.0.10 --dport 102 --tcp-flags RST RST -j DROP
 
@@ -11,7 +11,7 @@ iptables -A OUTPUT -p tcp -d 192.168.0.1 -s 192.168.0.10 --dport 102 --tcp-flags
 
 --dport. Port used by the PLC.
 
---tcp-flags. We want to drop any reset packet coming out from our linux machine. 
+--tcp-flags. We want to drop any reset packet coming out from the Linux machine. 
 
 
-The code inside the file S71500_U.py only writes a value in the space of memory IW4. However it can be modified for writing in other spaces of memory. 
+The code inside the file S71500_U.py writes a value in the space of memory IW4. However it can be modified for writing in other spaces of memory. 
