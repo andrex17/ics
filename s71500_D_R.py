@@ -1,5 +1,5 @@
 #!/usr/local/bin/python
-#READING THE DIGITAL OUTPUT MEMORY OF THE PLC
+#READING THE DIGITAL INPUT/OUTPUT MEMORY OF THE PLC
 import sys
 from scapy.all import *
 from binascii import unhexlify
