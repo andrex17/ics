@@ -17,3 +17,5 @@ iptables -A OUTPUT -p tcp -d 192.168.0.1 -s 192.168.0.10 --dport 102 --tcp-flags
 The code inside the file S71500_U.py writes a value from the Analog Input Memory of the PLC (IW4). However it can be modified for writing in other spaces of memory.
 
 The code inside the file S71500_U_R.py reads a value from the Analog Input Memory of the PLC. The example shows two different payloads for the IW4 and IW6 Memory.
+
+The code inside the file S71500_D_R.py reads a value from the Digital Input/Output Memory of the PLC. The example contains two different payloads for the I1.0 and Q1.0 PLC memory. It should be noted that specific bits such as I1.3 or Q0.5 can't be addressed, instead the packet is composed by a byte that contains entire 8 positions. 
